@@ -8,8 +8,8 @@ function App() {
   });
   const doOCR = async () => {
     await worker.load();
-    await worker.loadLanguage('eng');
-    await worker.initialize('eng');
+    await worker.loadLanguage('LCDDot_FT_500');
+    await worker.initialize('LCDDot_FT_500');
     const { data: { text } } = await worker.recognize('lcddot.png');
     setOcr(text);
   };
