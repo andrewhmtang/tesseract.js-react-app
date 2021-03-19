@@ -10,7 +10,7 @@ function App() {
     await worker.load();
     await worker.loadLanguage('eng');
     await worker.initialize('eng');
-    const { data: { text } } = await worker.recognize('https://tesseract.projectnaptha.com/img/eng_bw.png');
+    const { data: { text } } = await worker.recognize('../lcddot.png');
     setOcr(text);
   };
   const [ocr, setOcr] = useState('Recognizing...');
